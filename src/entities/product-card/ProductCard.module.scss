@@ -6,8 +6,7 @@
   border-radius: 20px;
   box-shadow: 5px 5px 5px 1px rgba(128, 128, 128, 0.212);
   margin: 20px;
-  border: 1px solid black;
-
+  transform: scale(0.8);
   &__right {
     width: 75%;
     display: flex;
@@ -32,13 +31,6 @@
     padding-left: 40px;
     padding-top: 15px;
 
-    &__info {
-      margin-top: 125px;
-    }
-
-    &__logo {
-    }
-
     &__name {
       color: #2b2b2b;
       font-size: 30px;
@@ -49,14 +41,23 @@
       text-transform: uppercase;
     }
 
-    &__model {
-      color: #e1e1e1;
-      text-transform: uppercase;
-      font-size: 8px;
-    }
+    &__info {
+      margin-top: 125px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-    &__btn {
-      margin-top: 40px;
+      &__model {
+        color: #fcc100;
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+
+      &__btn {
+        margin-top: 20px;
+        font-size: 11px;
+        font-weight: 800;
+      }
     }
   }
 }

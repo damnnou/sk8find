@@ -1,5 +1,7 @@
 import React from "react";
 import ProductCard from "../../entities/product-card/ProductCard";
+import Header from "../../shared/layout/Header/Header";
+import cls from "./ProductsPage.module.scss";
 
 const ProductsPage = () => {
   const products = [
@@ -21,16 +23,19 @@ const ProductsPage = () => {
 
   return (
     <>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          id={product.id}
-          name={product.name}
-          img={product.img}
-          describe={product.describe}
-          price={product.price}
-        />
-      ))}
+      <Header />
+      <div className={cls.productsPage}>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            img={product.img}
+            describe={product.describe}
+            price={product.price}
+          />
+        ))}
+      </div>
     </>
   );
 };
