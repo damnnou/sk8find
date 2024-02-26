@@ -27,6 +27,8 @@ const ProductsPage = () => {
           id={product.id}
           name={product.name}
           img={product.img}
+          describe={product.describe}
+          price={product.price}
         />
       ))}
     </>
