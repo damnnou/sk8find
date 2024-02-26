@@ -1,0 +1,27 @@
+.productCard {
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 1px rgba(128, 128, 128, 0.212);
+    margin: 20px;
+
+    &__info {
+        padding: 20px;
+    }
+
+    &__logo {
+    }
+
+    &__name {
+        color: black;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    &__model {
+        color: gray;
+        text-transform: uppercase;
+    }
+}
