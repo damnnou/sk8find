@@ -1,12 +1,11 @@
 .productCard {
-  width: 600px;
-  height: 350px;
+  width: 500px;
+  height: 300px;
   display: flex;
   flex-direction: row;
   border-radius: 20px;
   box-shadow: 5px 5px 5px 1px rgba(128, 128, 128, 0.212);
-  margin: 20px;
-  transform: scale(0.8);
+
   &__right {
     width: 75%;
     display: flex;
