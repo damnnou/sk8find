@@ -1,7 +1,7 @@
 import React from "react";
 import cls from "./Header.module.scss";
 import MenuIcn from "../../../assets/menu.svg";
-import Logo from "../../../assets/logo1.svg";
+import Logo from "../../../assets/logo4.svg";
 
 const Header = () => {
   return (
