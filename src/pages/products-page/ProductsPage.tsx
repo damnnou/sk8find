@@ -1,33 +1,41 @@
-import React from 'react';
-import ProductCard from '../../entities/product-card/ProductCard';
-import Header from '../../shared/layout/Header/Header';
-import cls from './ProductsPage.module.scss';
-import { getAllSneakers } from '../../api/get/sneakers';
+import React, { useEffect, useState } from "react";
+import ProductCard from "../../entities/product-card/ProductCard";
+import Header from "../../shared/layout/Header/Header";
+import cls from "./ProductsPage.module.scss";
+import { getAllSneakers } from "../../api/get/sneakers";
 
 const ProductsPage = () => {
-    const [sneakers, setSneakers] = React.useState([]);
+  const [sneakers, setSneakers] = useState([]);
 
-    React.useEffect(() => {
-        getAllSneakers().then((data) => console.log(data));
-    }, []);
+  useEffect(() => {
+    getAllSneakers().then((data) => setSneakers(data));
+  }, []);
 
-    return (
-        <>
-            <Header />
-            <div className={cls.productsPage}>
-                {sneakers.map((sneakers) => (
-                    <ProductCard
-                        key={product.id}
-                        id={product.id}
-                        name={product.name}
-                        img={product.img}
-                        describe={product.describe}
-                        price={product.price}
-                    />
-                ))}
-            </div>
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <div className={cls.productsPage}>
+        {sneakers.map((product) => {
+          console.log(product.title.length);
+          let title = product.title.split(" ");
+          title.length = 3;
+          title = title.join(" ");
+
+          console.log(title);
+          return (
+            <ProductCard
+              key={product.title}
+              id={product.id}
+              name={title}
+              img={product.img}
+              describe={product.brand}
+              price={product.price}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
 };
 
 export default ProductsPage;
