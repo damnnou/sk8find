@@ -1,0 +1,146 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: -600px;
+  width: 300px;
+  height: 100%;
+  padding: 40px 20px;
+  background-color: #000000;
+  padding: 20px;
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.open {
+  left: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 80px;
+  margin-bottom: 400px;
+}
+
+.menu li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu li:hover {
+  color: #ffcc00;
+}
+
+.menu input {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #333; /* Цвет фона поля поиска */
+  color: #fff;
+  border: 1px solid #fff; /* Белая рамка вокруг поля поиска */
+  outline: none;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #666; /* Цвет плейсхолдера */
+  }
+
+  &:focus {
+    border-color: #ffcc00; /* Цвет рамки при фокусе */
+  }
+}
+
+.closeButton {
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 12px 100px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.3s ease-in-out; /* Анимация изменения цвета и размера кнопки */
+
+  &:hover {
+    background-color: #e6b800; /* Цвет при наведении */
+    color: #fff;
+    transform: scale(1.1); /* Масштабирование при наведении */
+  }
+}
+// ...................
+// .menu {
+//   position: fixed;
+//   top: 0;
+//   left: -500px; /* начальное значение сдвига влево */
+//   width: 300px;
+//   height: 100%;
+//   background-color: #000; /* Черный фон */
+//   padding: 40px 20px; /* Грамотные отступы */
+//   color: #fff; /* Белые буквы */
+//   opacity: 0;
+//   transform: translateX(-20px); /* Начальная позиция перед анимацией */
+//   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+//   z-index: 1000;
+//   overflow: hidden;
+// }
+
+// .open {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+
+// .menu ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+
+// .menu li {
+//   margin-bottom: 20px; /* Грамотные отступы между элементами */
+//   font-size: 18px; /* Размер шрифта */
+//   cursor: pointer;
+//   transition: color 0.3s ease-in-out;
+// }
+
+// .menu li:last-child {
+//   margin-bottom: 0;
+// }
+
+// .menu li:hover {
+//   color: #ffcc00; /* Цвет при наведении */
+// }
+
+// .closeButton {
+//   margin-top: 20px;
+//   padding: 10px;
+//   background-color: #fff;
+//   color: #000;
+//   border: none;
+//   cursor: pointer;
+//   outline: none;
+//   font-size: 16px;
+//   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+// }
+
+// .closeButton:hover {
+//   background-color: #000;
+//   color: #fff;
+// }
